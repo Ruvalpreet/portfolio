@@ -32,7 +32,7 @@ const HomeSection = () => {
       <div className="absolute top-1/4 left-1/3 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="text-6xl font-bold mb-6">Hello, my name is Ruval</div>
         <div className="font-bold text-4xl text-blue-500">
-          And I'm a <span className="typing"></span>
+          And I&apos;m a <span className="typing"></span>
         </div>
       </div>
     </div>
