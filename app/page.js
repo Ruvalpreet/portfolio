@@ -6,6 +6,7 @@ import Typed from "typed.js";
 import backgroundImage from "./assets/BackgroundImage.jpg";
 import Image from "next/image";
 import App from "./App";
+import Navigation from "./Navigation/page";
 export default function Home() {
   useEffect(() => {
     const typed = new Typed(".typing", {
@@ -26,8 +27,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative h-screen">
-      <div className="absolute inset-0 z-0">
+    <div>
+      <Navigation />
+      <div className="absolute inset-0 -z-10">
         <Image
           src={backgroundImage}
           alt="Background Image"
@@ -35,16 +37,12 @@ export default function Home() {
           objectFit="cover"
         />
       </div>
+
       <App />
-      <Link href="/AboutMe">
-        <div className="text-green-200 text-3xl font-bold">About Me</div>
-      </Link>
-      <Link href="/Project">
-        <div className="text-green-200 text-3xl font-bold">My Project</div>
-      </Link>
-      <div className="absolute top-1/4 left-1/3 transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <div className="text-6xl font-bold mb-6">Hello, my name is Ruval</div>
-        <div className="font-bold text-4xl text-blue-500">
+
+      <div className="absolute top-1/4 left-1/3 transform -translate-x-1/2 -translate-y-1/2 z-10 mt-3">
+        <div className="text-6xl font-bold mb-6">HELLO, MY NAME IS RUVAL</div>
+        <div className="font-bold text-4xl text-yellow-500">
           And I&apos;m a <span className="typing"></span>
         </div>
       </div>

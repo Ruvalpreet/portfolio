@@ -1,46 +1,45 @@
+"use client";
 import Image from "next/image";
 import Profile from "../assets/profile.jpg";
+import Navigation from "../Navigation/page";
+import Typed from "typed.js";
+import App from "../App";
+import { useEffect } from "react";
 function page() {
+  useEffect(() => {
+    const typed = new Typed(".typing", {
+      strings: [
+        "a dedicated software developer with a passion for elegant solutions. Graduating with a 4.00/4.00 GPA from the Southern Alberta Institute of Technology, I&apos;ve honed my skills in Data Structures, Database Designing, and Web Application Programming. I bring a commitment to growth, innovation, and collaborative development. Let's connect on LinkedIn for exciting opportunities.",
+      ],
+      typeSpeed: 1,
+      loop: false,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
   return (
-    <div className="text-white mt-10 ">
-      <h1 className="text-3xl font-bold mr-4 text-center text-blue-500">
+    <div>
+      <Navigation />
+      <h1 className="text-7xl font-bold mr-4 text-center text-yellow-500 ">
         About Me
       </h1>
-      <div className="flex items-center justify-center">
+
+      <div className="flex items-center justify-center  ">
         <div className="m-10">
           <Image
             src={Profile}
             alt="Profile"
             className="h-80 w-64 rounded-full object-cover hover:animate-pulse "
           />
-          <h2 className="text-2xl font-bold mt-4 justify-center flex text-blue-500">
+          <h2 className="text-3xl font-bold mt-4 justify-center flex text-yellow-500 ">
             Ruval
           </h2>
         </div>
-        <p className="m-10 max-w-3xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam
-          maecenas sed enim ut sem viverra aliquet eget. Ac tincidunt vitae
-          semper quis lectus nulla at volutpat diam. Mattis nunc sed blandit
-          libero volutpat sed cras ornare. Consequat mauris nunc congue nisi
-          vitae suscipit tellus. A pellentesque sit amet porttitor. Tristique
-          risus nec feugiat in fermentum posuere urna. Blandit libero volutpat
-          sed cras. Sed vulputate odio ut enim blandit volutpat maecenas
-          volutpat blandit. Purus sit amet volutpat consequat mauris nunc congue
-          nisi vitae. Gravida quis blandit turpis cursus in hac. Tristique
-          sollicitudin nibh sit amet commodo nulla. Vestibulum morbi blandit
-          cursus risus at ultrices mi tempus. Ut etiam sit amet nisl purus in
-          mollis nunc. Nascetur ridiculus mus mauris vitae ultricies. Facilisis
-          leo vel fringilla est ullamcorper. Consequat id porta nibh venenatis
-          cras sed felis eget. Sollicitudin nibh sit amet commodo nulla facilisi
-          nullam. Sem viverra aliquet eget sit amet tellus cras adipiscing enim.
-          Vitae et leo duis ut. Enim eu turpis egestas pretium aenean pharetra
-          magna. Habitasse platea dictumst quisque sagittis purus sit amet.
-          Tortor at risus viverra adipiscing at in. Pellentesque pulvinar
-          pellentesque habitant morbi tristique senectus. Odio aenean sed
-          adipiscing diam donec adipiscing tristique. Placerat orci nulla
-          pellentesque dignissim enim sit amet. Leo integer malesuada nunc vel
-          risus commodo viverra. In hac habitasse platea dictumst
+        <p className="m-10 max-w-3xl pb-36 text-2xl ">
+          <span className="text-yellow-500 text-3xl ">I&apos;m Ruval,</span>
+          <span className="text-2xl ml-2 typing"></span>
         </p>
       </div>
     </div>
