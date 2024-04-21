@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Profile from "../assets/profile.jpg";
-function AboutMe() {
+function page() {
   return (
     <div className="text-white mt-10 ">
       <h1 className="text-3xl font-bold mr-4 text-center text-blue-500">
@@ -47,4 +47,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default page;
