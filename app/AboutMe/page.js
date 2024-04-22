@@ -5,7 +5,7 @@ import Navigation from "../Navigation/page";
 import Typed from "typed.js";
 import App from "../App";
 import { useEffect } from "react";
-function page() {
+function Page() {
   useEffect(() => {
     const typed = new Typed(".typing", {
       strings: [
@@ -46,4 +46,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
