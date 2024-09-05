@@ -104,7 +104,7 @@ class MyProject extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Head>
           <script
             async
@@ -148,7 +148,7 @@ class MyProject extends Component {
             ></div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }
