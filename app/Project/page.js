@@ -1,6 +1,7 @@
 "use client";
 import { Component } from "react";
 import Navigation from "../Navigation/page";
+import Head from "next/head";
 
 class MyProject extends Component {
   x = 100;
@@ -104,6 +105,13 @@ class MyProject extends Component {
   render() {
     return (
       <div>
+        <Head>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5519598443177466"
+            crossorigin="anonymous"
+          ></script>
+        </Head>
         <Navigation />
         <h1 className="text-7xl font-bold mr-4 text-center text-yellow-500">
           My Project
