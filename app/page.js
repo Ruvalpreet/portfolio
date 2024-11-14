@@ -1,6 +1,4 @@
 "use client";
-import Link from "next/link";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import Typed from "typed.js";
 import backgroundImage from "./assets/BackgroundImage.jpg";
